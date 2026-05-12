@@ -199,7 +199,6 @@ function isWord() {
     for (let i = x * wordLen; i <= x * wordLen + wordLen - 1; i++) {
         word = word + gameEl[i].textContent;
     }
-    console.log(word);
     return lexicon[wordLen].includes(word);
 }
 /**
