@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle by Vxsil</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script type="module" src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="panel">
+        <h1 class="panelH1">Bienvenue dans Wordle</h1>
+        <label for="wordLen">Longueur des mots</label>
+        <select id="wordLen">
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <br>
+        <label for="nbTry">Nombre de tentatives</label>
+        <input type="number" id="nbTry" value="5" min="1" max="16" onkeydown="return false">
+        <div class="control">
+            <button class="ctrl" id="m1" type="button">-1</button>
+            <button class="ctrl" id="reset" type="button">RESET</button>
+            <button class="ctrl" id="p1" type="button">+1</button>
+        </div>
+        <button type="submit" id="panelBtn">Jouer</button>
+    </div>
+
+    <div class="theGame" hidden>
+        <h3><a href="./wordle.html">Retour</a></h3>
+        <h1>Wordle</h1>
+        <h2>But du jeu</h2>
+        <p>Déterminer un mot de <span class="letter"></span> lettres.</p>
+        <br>
+        <p>Le joueur donne un mot et confirme avec Enter. Si le mot se trouve au dictionnaire, l'ordinateur accepte le
+            mot
+            et indique quelles lettres sont correctes :</p>
+        <br>
+        <ul>
+            <li>celles correctement placées sont en vert ;</li>
+            <li>celles présentes mais mal placées sont en orange ;</li>
+            <li>les autres ne sont pas modifiées.</li>
+        </ul>
+        <section id="game">
+
+        </section>
+        <output id="endGame"></output>
+    </div>
+</body>
+
+</html>
