@@ -133,7 +133,6 @@ function randomWord(wordLen) {
     const wordList = lexicon[wordLen];
     if (wordList && wordList.length > 0) {
         const randomIndex = Math.floor(Math.random() * wordList.length);
-        console.log(wordList[randomIndex]);
         return wordList[randomIndex];
     }
     console.log("words with the length of [" + wordLen + "] not found");
